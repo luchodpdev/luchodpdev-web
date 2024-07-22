@@ -6,7 +6,8 @@
 
 .App-header {
   font-family: 'Cascadia Code';
-  background-color: #282c34;
+  background-color: #1e2129;
+  background-image: url('../public/visualcode.webp');
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -16,23 +17,58 @@
 
   h1 {
     padding: 1rem;
-    margin-bottom: 5rem;
-    box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
+    
+    
     transition: .3s ease-in-out;
 
+   
+    
+  }
+
+  .navbar{
+    background-color: #1e2129df;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
+    margin-bottom: 5rem;
+    transition: .3s ease-in-out;
     &:hover {
-      box-shadow: 0 3px 3px rgba(144, 218, 255, 0.5);
+      box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
+    }
+    #navbaritems{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+    }
+    a{
+      
+      font-size: 1rem;
+      padding: 2rem;
+      gap: 1rem;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 
   .header-cards {
+    
+    margin-top: 14rem;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
+    margin-inline: 3rem;
     
     
     }
     .cards-card{
+      border-radius: 3px;
+      background-color: #1e2129e4;
       box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
       display: flex;
       flex-direction: column;
@@ -41,12 +77,13 @@
       transition: .3s ease-in-out;
 
     &:hover {
-      box-shadow: 0 3px 3px rgba(144, 218, 255, 0.5);
+      box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
     }
   }
 }
 
 .App-main {
+  padding-top: 3rem;
   font-family: 'Cascadia Code';
   background-color: #282c34;
   min-height: 100vh;
@@ -58,52 +95,105 @@
   padding-bottom: 3rem;
 
   h3 {
+    border-radius: 3px;
     padding: 1rem;
+    background-color: #1e2129;
     margin-bottom: 5rem;
     box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
     transition: .3s ease-in-out;
 
     &:hover {
-      box-shadow: 0 3px 3px rgba(144, 218, 255, 0.5);
+      box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
     }
   }
 
   .main-cards {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
     padding-bottom: 3rem;
+    margin-inline: 3rem;
     
     }
     .cards-card{
+      border-radius: 3px;
       box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
       display: flex;
       flex-direction: column;
       padding: 1rem 2rem ;
+      background-color: #1e2129;
       
 
       transition: .3s ease-in-out;
 
     &:hover {
-      box-shadow: 0 3px 3px rgba(144, 218, 255, 0.5);
+      box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
     }
   }
 
   .cards-software{
+    border-radius: 3px;
     box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
     padding: 1rem 2rem ;
+    max-width: 14rem;
+    background-color: #1e2129;
     
 
     transition: .3s ease-in-out;
 
   &:hover {
-    box-shadow: 0 3px 3px rgba(144, 218, 255, 0.5);
+    box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
   }
 }
+  .software-logo {
+    width: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+    
+  }
+  .software-logo2 {
+    width: 10rem;
+    padding: 0.1rem;
+    border-radius: 5px;
+    
+  }
 }
 
 .logos-react{
   width: 15rem;
+
+}
+.main-fieldset{
+  display: flex;
+  align-items: center;
+  max-width: 40rem;
+  max-height: 430rem;
+  font-size: large;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  gap: 3rem;
+  border: none;
+}
+
+#fotoyo{
+  
+  width: 15rem;
+  box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.class-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #1e2129;
+  
+  .footer-rights{
+    font-weight: bold;
+  }
 }
