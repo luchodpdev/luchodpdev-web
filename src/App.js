@@ -10,7 +10,7 @@ import './App.css';
 const App = () => {
 
     return (
-      <div>
+      <div >  
         <header className='App-header'>
 
           <NavBar />
@@ -27,7 +27,7 @@ const App = () => {
         <MainCardsSoftware />
 
         </main>
-        <footer className='class-footer'>
+        <footer >
           <Footer />
         </footer>
       </div>

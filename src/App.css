@@ -36,6 +36,8 @@
     box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
     margin-bottom: 5rem;
     transition: .3s ease-in-out;
+    animation: navbar .4s ease-in-out .5s both reverse;
+    
     &:hover {
       box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
     }
@@ -44,17 +46,73 @@
       flex-direction: row;
       flex-wrap: wrap;
       
+      
+      
     }
     a{
       
       font-size: 1rem;
       padding: 2rem;
       gap: 1rem;
+      transition: scale .2s;
+
       &:hover{
         text-decoration: underline;
+        scale: 1.1;
+        transition: scale .5s;
+        cursor: pointer;
       }
     }
+    h1 {
+      opacity: 0;
+
+      animation: aparecer .5s ease-in-out 1s forwards reverse
+      
+    }
+    a:first-child{
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 1.5s forwards reverse;
+
+    }
+
+    a:nth-child(2){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 1.7s forwards reverse;
+
+    }
+
+    a:nth-child(3){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 1.9s forwards reverse;
+
+    }
+
+    a:nth-child(4){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 2.1s forwards reverse;
+
+    }
+
+    a:nth-child(5){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 2.3s forwards reverse;
+
+    }
   }
+
+  
+
+  
 
   .header-cards {
     
@@ -79,6 +137,50 @@
     &:hover {
       box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
     }
+  }
+}
+
+@media (width < 980px) {
+  .App-header .navbar {
+    justify-content: center;
+  }
+}
+
+
+
+@keyframes aparecer {
+  from {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  
+  to {
+    opacity: 0;
+    transform: translateX(50px)
+  }
+}
+
+@keyframes aparecerderecha {
+  from {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+  
+  to {
+    opacity: 0;
+    transform: translateY(-30px)
+  }
+}
+
+@keyframes navbar {
+  from {
+    
+    transform: translateY(0px)
+  }
+  
+  to {
+    
+    transform: translateY(-100px)
   }
 }
 
@@ -192,8 +294,20 @@
   justify-content: space-between;
   padding: 3rem;
   background-color: #1e2129;
+  max-height: 50px;
+  
   
   .footer-rights{
     font-weight: bold;
   }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-content:right;
+  
+
+  
+  
 }

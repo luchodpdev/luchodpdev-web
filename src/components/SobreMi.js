@@ -15,7 +15,7 @@ const SobreMi = () => {
             lorem impsum lorem impsum lorem impsum
             lorem impsum lorem impsum lorem impsum
             lorem impsum lorem impsum lorem impsum
-            lorem impsum lorem impsum lorem impsum
+            lorem impsum lorem impsum lorem impsum 
             </p>
           </div>
         </fieldset>
