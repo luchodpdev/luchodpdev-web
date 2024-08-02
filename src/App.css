@@ -36,6 +36,10 @@
     box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
     margin-bottom: 5rem;
     transition: .3s ease-in-out;
+    animation: navbar .4s ease-in-out .5s both reverse;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    
     &:hover {
       box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
     }
@@ -44,23 +48,82 @@
       flex-direction: row;
       flex-wrap: wrap;
       
+      
+      
     }
     a{
       
-      font-size: 1rem;
+      font-size: 1.1rem;
       padding: 2rem;
       gap: 1rem;
+      transition: scale .2s;
+
       &:hover{
         text-decoration: underline;
+        scale: 1.1;
+        transition: scale .5s;
+        cursor: pointer;
       }
     }
+    h1 {
+      opacity: 0;
+      font-size: 1.4rem;
+
+      animation: aparecer .5s ease-in-out 1s forwards reverse
+      
+    }
+    a:first-child{
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 1.5s forwards reverse;
+
+    }
+
+    a:nth-child(2){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 1.7s forwards reverse;
+
+    }
+
+    a:nth-child(3){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 1.9s forwards reverse;
+
+    }
+
+    a:nth-child(4){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 2.1s forwards reverse;
+
+    }
+
+    a:nth-child(5){
+      opacity: 0;
+
+
+      animation: aparecerderecha .4s ease-in-out 2.3s forwards reverse;
+
+    }
   }
+
+  
+
+  
 
   .header-cards {
     
     margin-top: 14rem;
     display: flex;
     flex-direction: row;
+    margin-bottom: 8rem;
+
     gap: 2rem;
     margin-inline: 3rem;
     
@@ -76,11 +139,94 @@
 
       transition: .3s ease-in-out;
 
+      animation: header-cards 1s ease-in-out 2s both;
+
+  
+
+
     &:hover {
       box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
+      border-radius: 10px;
     }
   }
+  .cards-card:nth-child(2) {
+    animation-delay: 2.3s;
+  }
 }
+
+@keyframes header-cards {
+  from {
+    color:black;
+    opacity: 0;
+    scale: 0.9;
+    
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (width < 980px) {
+  .App-header .navbar {
+    justify-content: center;
+  }
+
+}
+
+@keyframes aparecer-scroll{
+  from {
+    opacity: 0;
+    translate: 0 100px;
+    scale: .5;
+  }
+  to {  
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+
+
+@keyframes aparecer {
+  from {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+    
+  }
+}
+
+@keyframes aparecerderecha {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+    
+  }
+  
+  to {
+    opacity: 0;
+    transform: translateY(-30px)
+  }
+}
+
+@keyframes navbar {
+  from {
+    
+    transform: translateY(0px)
+  }
+  
+  to {
+    
+    transform: translateY(-100px)
+  }
+}
+
 
 .App-main {
   padding-top: 3rem;
@@ -102,8 +248,13 @@
     box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
     transition: .3s ease-in-out;
 
+    animation: aparecer-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+
     &:hover {
       box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
+      border-radius: 10px;
     }
   }
 
@@ -124,11 +275,19 @@
       background-color: #1e2129;
       
 
+      animation: aparecer-scroll linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 30%;
+      
+
       transition: .3s ease-in-out;
 
     &:hover {
       box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
+      border-radius: 10px;
+      
     }
+    
   }
 
   .cards-software{
@@ -141,12 +300,18 @@
     padding: 1rem 2rem ;
     max-width: 14rem;
     background-color: #1e2129;
+
+    animation: aparecer-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
     
 
     transition: .3s ease-in-out;
 
   &:hover {
     box-shadow: 0 3px 10px rgba(144, 218, 255, 0.5);
+    border-radius: 10px;
+    
   }
 }
   .software-logo {
@@ -178,6 +343,10 @@
   margin-bottom: 4rem;
   gap: 3rem;
   border: none;
+
+  animation: aparecer-scroll linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
 }
 
 #fotoyo{
@@ -192,8 +361,20 @@
   justify-content: space-between;
   padding: 3rem;
   background-color: #1e2129;
+  max-height: 50px;
+  
   
   .footer-rights{
     font-weight: bold;
   }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-content:right;
+  
+
+  
+  
 }
